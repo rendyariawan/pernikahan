@@ -364,34 +364,32 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<h2>Save The Date <a href="rendy.ics" class="btn btn-info"><i class="icon-download2"></i></a></h2>
+					<h2>Love Gift</h2>
+					<p style="font-family: 'Courgette', Arial, serif">Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui :</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="col-md-6 col-sm-6 text-center">
 						<div class="event-wrap animate-box">
-							<h3 style="font-family: 'Oswald', Arial, serif;">Akad Nikah</h3>
-							<img src="images/rehan-square.JPG" style="width: 100px;" alt="">
+							
+							<img src="images/logosumsel.png" style="width: 400px;" alt="">
+							<p style="font-family: 'Courgette', Arial, serif">No. Rekening 1440960617</p>
+							<p style="font-family: 'Courgette', Arial, serif">an Muhamad Rendy Ariawan</p>
+
+							<button class="btn btn-primary" data-nomer="1440960617" onclick="salin(this)">Salin
+								No. Rekening<i class="icon-clipboard"></i></button>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6 text-center">
 						<div class="event-wrap animate-box">
-							<h3 style="font-family: 'Oswald', Arial, serif;">Resepsi</h3>
-							<div class="event-col">
-								<i class="icon-clock"></i>
-								<span>10:00</span>
-								<span>Selesai</span>
-							</div>
-							<div class="event-col">
-								<i class="icon-calendar"></i>
-								<span>Minggu</span>
-								<span class="tanggal">07 Mei 2023</span>
-							</div>
-							<p style="font-family: 'Courgette', Arial, serif">Alamat : JL. Komplek Timah RT 02 Desa Pedindang(Depan Kantor Desa Pedindang)</p>
-
-							<a href="https://goo.gl/maps/tFAAh3rzRCLLQVwAA" target="_blank"
-							   class="btn btn-primary">Penunjuk Lokasi <i class="icon-map2"></i></a>
+							
+							<img src="images/logobri.png" style="width: 400px;" alt="">
+							<p style="font-family: 'Courgette', Arial, serif">No. Rekening 110401005987505</p>
+							<p style="font-family: 'Courgette', Arial, serif">an Muhamad Rendy Ariawan</p>
+							   <button class="btn btn-primary" data-nomer="110401005987505" onclick="salin(this)">Salin
+								No. Rekening<i class="icon-clipboard"></i></button>
+							   
 						</div>
 					</div>
 					<!--<div class="col-md-12 animate-box" style="margin-top: 15px;">
@@ -455,7 +453,7 @@
             </div>
         </div>
     </div>-->
-	<div id="fh5co-ayat" style="margin-top: 100px;">
+	<div id="fh5co-ayat" style="margin-top: 200px;">
 		<!--<img height="400" width="100%" style="top: 0" src="images/background/wave-up.svg">-->
 		<img height="400" width="100%" style="position: absolute; bottom: -175px" src="images/background/wave-down.svg">
 		<div class="container">
@@ -748,6 +746,19 @@
 <script src="lib/lightgallery.js/dist/plugins/fullscreen/lg-fullscreen.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
 
+<script>
+	const salin = (btn) => {
+    navigator.clipboard.writeText(btn.getAttribute('data-nomer').toString());
+    let tmp = btn.innerHTML;
+    btn.innerHTML = 'Tersalin';
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btn.innerHTML = tmp;
+        btn.disabled = false;
+    }, 1500);
+};
+</script>
 <script>
 	day = 07; month = 04; year = 2023;
 	hour = 10; minute = 0;
